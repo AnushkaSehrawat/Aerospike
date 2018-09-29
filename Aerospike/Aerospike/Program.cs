@@ -14,12 +14,12 @@ namespace Aerospike
     {
         static void Main(string[] args)
         {
-            StreamReader sr = new StreamReader(@"C:/Users/asehrawat/Desktop/2018-01-trump-twitter-wars/data/tweets/tweets1.csv");
+            StreamReader sr = new StreamReader(@"C:\Users\Admin\Desktop\tweets123.csv");
             CsvReader cr = new CsvReader(sr);
             IEnumerable<Tweet> record = cr.GetRecords<Tweet>();
             var client = new AerospikeClient("18.235.70.103", 3000);
             string nameSpace = "AirEngine";
-            string setName = "Anushka";
+            string setName = "anushkaS";
             foreach (var row in record)
             {
                     var key = new Key(nameSpace, setName, row.id);
